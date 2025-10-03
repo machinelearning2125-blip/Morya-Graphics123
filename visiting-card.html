@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visiting Card Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="bg-white shadow-md sticky top-0 left-0 w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4 py-3">
+            <div class="flex items-center space-x-3">
+                <img src="mg main final logo.png" alt="Logo" width="86" height="64" class="object-contain ml-1">
+                <span class="text-2xl font-bold text-indigo-700 tracking-wide" id="site-title">मोरया ग्राफिक्स</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-indigo-700 font-semibold text-lg">Back to Home</a>
+                <button id="translate-btn" class="px-4 py-2 bg-indigo-100 text-indigo-700 font-bold rounded-lg shadow text-base">Translate</button>
+            </div>
+        </nav>
+    </header>
+    <main class="container mx-auto px-6 lg:px-12 py-16">
+        <section>
+            <h2 class="text-4xl font-extrabold text-center text-indigo-700 mb-12 tracking-tight" id="visiting-title">व्हिजिटिंग कार्ड</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mx-auto w-full max-w-5xl">
+                <div class="flex flex-col items-center">
+                    <img src="card 1.jpg" alt="Visiting Card 1" class="rounded-xl shadow-lg mx-auto portfolio-img" data-caption="Card 1">
+                    <div class="mt-2 text-base font-semibold text-gray-700 text-center" id="card1-caption">Card 1</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="card 2.jpg" alt="Visiting Card 2" class="rounded-xl shadow-lg mx-auto portfolio-img" data-caption="Card 2">
+                    <div class="mt-2 text-base font-semibold text-gray-700 text-center" id="card2-caption">Card 2</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="card 4.jpg" alt="Visiting Card 4" class="rounded-xl shadow-lg mx-auto portfolio-img" data-caption="Card 4">
+                    <div class="mt-2 text-base font-semibold text-gray-700 text-center" id="card3-caption">Card 3</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="card 3.jpg" alt="Visiting Card 3" class="rounded-xl shadow-lg mx-auto portfolio-img" data-caption="Card 3">
+                    <div class="mt-2 text-base font-semibold text-gray-700 text-center" id="card4-caption">Card 4</div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="card 5.jpg" alt="Visiting Card 5" class="rounded-xl shadow-lg mx-auto portfolio-img" data-caption="Card 5">
+                    <div class="mt-2 text-base font-semibold text-gray-700 text-center" id="card5-caption">Card 5</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+    const translations = {
+        en: {
+            'मोरया ग्राफिक्स': 'Morya Graphics',
+            'व्हिजिटिंग कार्ड': 'Visiting Card',
+            'Card 1': 'Card 1',
+            'Card 2': 'Card 2',
+            'Card 3': 'Card 3',
+            'Card 4': 'Card 4',
+            'Card 5': 'Card 5'
+        },
+        mr: {
+            'Morya Graphics': 'मोरया ग्राफिक्स',
+            'Visiting Card': 'व्हिजिटिंग कार्ड',
+            'Card 1': 'कार्ड 1',
+            'Card 2': 'कार्ड 2',
+            'Card 3': 'कार्ड 3',
+            'Card 4': 'कार्ड 4',
+            'Card 5': 'कार्ड 5'
+        }
+    };
+    let currentLang = 'mr';
+    document.getElementById('translate-btn').addEventListener('click', function() {
+        const toLang = currentLang === 'mr' ? 'en' : 'mr';
+        document.getElementById('site-title').textContent = translations[toLang][currentLang === 'mr' ? 'मोरया ग्राफिक्स' : 'Morya Graphics'] || (toLang === 'en' ? 'Morya Graphics' : 'मोरया ग्राफिक्स');
+        document.getElementById('visiting-title').textContent = toLang === 'en' ? 'Visiting Card' : 'व्हिजिटिंग कार्ड';
+        document.getElementById('card1-caption').textContent = toLang === 'en' ? 'Card 1' : 'कार्ड 1';
+        document.getElementById('card2-caption').textContent = toLang === 'en' ? 'Card 2' : 'कार्ड 2';
+        document.getElementById('card3-caption').textContent = toLang === 'en' ? 'Card 3' : 'कार्ड 3';
+        document.getElementById('card4-caption').textContent = toLang === 'en' ? 'Card 4' : 'कार्ड 4';
+        document.getElementById('card5-caption').textContent = toLang === 'en' ? 'Card 5' : 'कार्ड 5';
+        currentLang = toLang;
+    });
+    </script>
+</body>
+</html>

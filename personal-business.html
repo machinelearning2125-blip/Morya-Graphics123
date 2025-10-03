@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Business Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { background: #f8fafc; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 16px 0 rgba(99,102,241,0.10);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 32px 0 rgba(99,102,241,0.18);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #4f46e5;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-md sticky top-0 left-0 w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4 py-3">
+            <div class="flex items-center space-x-3">
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="mg main final logo.png" alt="Logo" class="h-16 w-auto object-contain">
+                        <span class="text-2xl font-bold text-indigo-700 tracking-wide" id="site-title">मोरया ग्राफिक्स</span>
+                    </div>
+                </div>
+            </div>
+                <div class="flex items-center gap-4">
+                    <a href="index.html" class="text-indigo-700 font-semibold text-lg">Back to Home</a>
+                    <button id="translate-btn" class="px-4 py-2 bg-indigo-100 text-indigo-700 font-bold rounded-lg shadow text-base">Translate</button>
+                </div>
+        </nav>
+    </header>
+    <h1 id="personal-title">Personal Business Gallery</h1>
+    <div class="gallery">
+    <img src="business 1.jpg" alt="Business 1">
+    <img src="business 5.jpg" alt="Business 5">
+    <img src="business 3.jpg" alt="Business 3">
+    <img src="business 4.jpg" alt="Business 4">
+    <img src="business 2.jpg" alt="Business 2">
+    <img src="business 6.jpg" alt="Business 6">
+    <img src="business 7.jpg" alt="Business 7">
+    <img src="business 8.jpg" alt="Business 8">
+    <img src="business 9.jpg" alt="Business 9">
+    <img src="business 10.jpg" alt="Business 10">
+    <img src="business 11.jpg" alt="Business 11">
+    </div>
+
+<script>
+const translations = {
+    en: {
+        'मोरया ग्राफिक्स': 'Morya Graphics',
+        'Personal Business Gallery': 'Personal Business Gallery',
+    },
+    mr: {
+        'Morya Graphics': 'मोरया ग्राफिक्स',
+        'Personal Business Gallery': 'Personal Business Gallery',
+    }
+};
+let currentLang = 'mr';
+document.getElementById('translate-btn').addEventListener('click', function() {
+    const toLang = currentLang === 'mr' ? 'en' : 'mr';
+    document.getElementById('site-title').textContent = translations[toLang][currentLang === 'mr' ? 'मोरया ग्राफिक्स' : 'Morya Graphics'] || (toLang === 'en' ? 'Morya Graphics' : 'मोरया ग्राफिक्स');
+    document.getElementById('personal-title').textContent = translations[toLang][currentLang === 'mr' ? 'Personal Business Gallery' : 'Personal Business Gallery'] || 'Personal Business Gallery';
+    currentLang = toLang;
+});
+</script>
+</body>
+</html>

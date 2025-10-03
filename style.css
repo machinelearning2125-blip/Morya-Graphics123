@@ -1,0 +1,53 @@
+/* Custom Styles for Morya Grafix */
+.portfolio-card img {
+    object-fit: contain !important;
+    background: #f3f4f6;
+    height: 16rem !important;
+    width: 100%;
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+}
+.portfolio-card:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 8px 32px 0 rgba(99, 102, 241, 0.18);
+}
+body {
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
+}
+.hero-bg {
+    background: linear-gradient(120deg, #6366f1 0%, #f472b6 100%);
+}
+.glass {
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.glass:hover {
+    box-shadow: 0 16px 40px 0 rgba(99, 102, 241, 0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+.nav-link {
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #6366f1;
+}
+@media (max-width: 768px) {
+    .hero-bg .container {
+        padding: 0 1rem;
+    }
+    .glass {
+        padding: 1.5rem 1rem;
+    }
+}
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    .portfolio-card img, .glass img {
+        height: 180px !important;
+    }
+}

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morya Graphics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Modern Hero Section -->
+    <header class="bg-white shadow-md sticky top-0 left-0 w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center px-4 py-3 relative">
+            <div class="flex items-center space-x-3">
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div class="flex items-center justify-center gap-4">
+                        <img src="mg main final logo.png" alt="Logo" class="h-16 w-auto object-contain">
+                        <span class="text-2xl font-bold text-indigo-700 tracking-wide">मोरया ग्राफिक्स</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Desktop Nav -->
+            <div class="space-x-8 hidden md:flex items-center">
+                <a href="#services" class="nav-link text-indigo-700 text-lg font-semibold">सेवा</a>
+                <a href="#contact" class="nav-link text-indigo-700 text-lg font-semibold">संपर्क</a>
+                <button id="translate-btn" class="ml-6 px-4 py-2 bg-indigo-100 text-indigo-700 font-bold rounded-lg shadow text-base">Translate</button>
+            </div>
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="md:hidden flex items-center px-3 py-2 border rounded text-indigo-700 border-indigo-300 focus:outline-none" aria-label="Open Menu">
+                <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+            <!-- Mobile Nav Links -->
+            <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white shadow-lg rounded-b-xl z-40 flex-col items-center py-4 space-y-4 hidden md:hidden">
+                <a href="#services" class="nav-link block text-indigo-700 text-lg font-semibold">सेवा</a>
+                <a href="#contact" class="nav-link block text-indigo-700 text-lg font-semibold">संपर्क</a>
+                <button id="translate-btn-mobile" class="px-4 py-2 bg-indigo-100 text-indigo-700 font-bold rounded-lg shadow text-base">Translate</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 lg:px-12 py-16">
+    <!-- Hero Section (blank, above services) -->
+    <section id="hero" class="mb-12 h-56 flex flex-col items-center justify-center rounded-xl bg-gradient-to-r from-indigo-500 to-pink-500">
+                                        <div id="hero-slider" class="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+                                            <!-- Marathi slides -->
+                                            <div class="hero-slide-group" id="marathi-slides">
+                                                <h1 class="hero-slide text-3xl md:text-4xl font-extrabold text-white mb-2 text-center leading-relaxed" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">आम्ही अॅक्रिलिक एलईडी बोर्डमध्ये<br>विशेषज्ञ आहोत</h1>
+                                                <h1 class="hero-slide text-3xl md:text-4xl font-extrabold text-white mb-2 text-center leading-relaxed" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px; display:none;">आकर्षक बॅनर डिझाइनसाठी<br>आजच संपर्क साधा</h1>
+                                            </div>
+                                            <!-- English slides -->
+                                            <div class="hero-slide-group" id="english-slides" style="display:none;">
+                                                <h2 class="hero-slide text-2xl md:text-3xl font-bold text-white/80 mb-4 text-center" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px;">We are specialist in Acrylic LED Boards</h2>
+                                                <h2 class="hero-slide text-2xl md:text-3xl font-bold text-white/80 mb-4 text-center" style="font-family: 'Montserrat', sans-serif; letter-spacing: 1px; display:none;">Contact today for attractive banner designs</h2>
+                                            </div>
+                                        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="mb-20 pt-24 -mt-24 scroll-mt-24">
+            <h2 class="text-4xl font-extrabold text-center text-indigo-700 mb-12 tracking-tight">आमच्या सेवा</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="visiting-card.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">💳</span>
+                        <h3 class="text-xl font-bold mb-2 text-pink-500" id="visiting-card-seva">व्हिजिटिंग कार्ड</h3>
+                        <p class="text-gray-700" id="visiting-card-seva-desc">व्यावसायिक आणि आकर्षक व्हिजिटिंग कार्ड डिझाइन व प्रिंट.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="birthday-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🎨</span>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600">वाढदिवस डिझाइन</h3>
+                        <p class="text-gray-700">आकर्षक वाढदिवस बॅनर आणि पोस्टर्स डिझाइन.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="invitation-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">✉️</span>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600" id="invitation-design">आमंत्रण डिझाइन</h3>
+                        <p class="text-gray-700" id="invitation-design-desc">सर्व प्रसंगांसाठी आकर्षक आमंत्रण डिझाइन.</p>
+                    </a>
+                </div>
+                <!-- Visiting card seva removed as requested -->
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="wedding-invite.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">💍</span>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600">लग्न पत्रिका डिझाइन</h3>
+                        <p class="text-gray-700">आधुनिक आणि पारंपारिक लग्न पत्रिकांचे डिझाइन.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="personal-business-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🏢</span>
+                        <h3 class="text-xl font-bold mb-2 text-pink-500">Personal Business</h3>
+                        <p class="text-gray-700">वैयक्तिक व्यवसाय डिझाइन व प्रिंट.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="political-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🗳️</span>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600">इलेक्शन डिझाइन</h3>
+                        <p class="text-gray-700">राजकीय प्रचारासाठी डिझाइन सेवा.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="festival-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🎉</span>
+                        <h3 class="text-xl font-bold mb-2 text-pink-500">सण-उत्सव डिझाइन</h3>
+                        <p class="text-gray-700">सर्व सण-उत्सवासाठी आकर्षक डिझाइन.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="lagna-patrika-video.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🎬</span>
+                        <h3 class="text-xl font-bold mb-2 text-pink-500">लग्न पत्रिका व्हिडिओ</h3>
+                        <p class="text-gray-700">लग्न पत्रिकांसाठी खास व्हिडिओ डिझाइन.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="frame-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">🖼️</span>
+                        <h3 class="text-xl font-bold mb-2 text-pink-500">फोटो फ्रेम</h3>
+                        <p class="text-gray-700">खास प्रसंगांसाठी सुंदर फोटो फ्रेम्स.</p>
+                    </a>
+                </div>
+                <div class="glass p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 transition-transform duration-300">
+                    <a href="acrylic-gallery.html" style="text-decoration:none; color:inherit; width:100%" class="block focus:outline-none">
+                        <span class="text-5xl mb-4 block">💡</span>
+                        <h3 class="text-xl font-bold mb-2 text-indigo-600">अॅक्रिलिक एलईडी बोर्ड</h3>
+                        <p class="text-gray-700">डिझाइन केलेले आकर्षक अॅक्रिलिक एलईडी बोर्ड उपलब्ध.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Portfolio Section removed as per user request -->
+
+        <!-- Other Services Section -->
+        <section class="mb-16">
+            <div class="bg-blue-600 text-white p-8 rounded-xl shadow-lg text-center">
+                <h2 class="text-3xl font-bold mb-4">प्रमाणपत्र डिझाइन तसेच व्हिजिटिंग कार्ड डिझाइन व प्रिंट करून मिळेल.</h2>
+                <p class="text-lg font-semibold">आम्ही तयार आहोत, आपल्याला सेवेत..!</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer id="contact" class="bg-gradient-to-r from-indigo-700 to-pink-500 text-white py-16 px-6 lg:px-12 mt-20 rounded-t-3xl">
+        <div class="container mx-auto flex flex-col items-center justify-center gap-6">
+            <h3 class="text-3xl font-extrabold mb-2 text-center">संपर्क साधा</h3>
+            <p class="text-lg mb-2 text-center">डिझाइन किंवा प्रिंटिंगसाठी आजच संपर्क करा!</p>
+            <p class="text-xl font-bold text-center">रोहन मोरये</p>
+            <a href="tel:+919156829883" class="block text-2xl font-bold text-yellow-300 hover:underline mt-2 text-center">+91 9156829883</a>
+            <div class="flex justify-center items-center space-x-6 mt-4">
+                <a href="https://www.facebook.com/share/1XDwxZe1bK/" target="_blank" rel="noopener" class="hover:scale-110 transition-transform"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" class="w-8 h-8 bg-white rounded-full p-1"></a>
+                <a href="https://instagram.com/moryagraphics1112" target="_blank" rel="noopener" class="hover:scale-110 transition-transform"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-8 h-8 bg-white rounded-full p-1"></a>
+                <a href="https://wa.me/919156829883" target="_blank" rel="noopener" class="hover:scale-110 transition-transform"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" class="w-8 h-8 bg-white rounded-full p-1"></a>
+            </div>
+        </div>
+        <div class="text-center text-sm text-white/80 mt-10">&copy; 2025 मोरया ग्राफिक्स. All rights reserved.</div>
+    </footer>
+
+</body>
+                                <script src="script.js"></script>
+<script>
+// Unified translation logic for all seva/service cards and site text
+const translations = {
+    'व्हिजिटिंग कार्ड': 'Visiting Card',
+    'व्यावसायिक आणि आकर्षक व्हिजिटिंग कार्ड डिझाइन व प्रिंट.': 'Professional and attractive visiting card design & print.',
+    en: {
+        'मोरया ग्राफिक्स': 'Morya Graphics',
+        'सेवा': 'Services',
+        'संपर्क': 'Contact',
+        'आमच्या सेवा': 'Our Services',
+        'वाढदिवस डिझाइन': 'Birthday Design',
+        'आकर्षक वाढदिवस बॅनर आणि पोस्टर्स डिझाइन.': 'Attractive birthday banners and poster designs.',
+        'आमंत्रण डिझाइन': 'Invitation Design',
+        'सर्व प्रसंगांसाठी आकर्षक आमंत्रण डिझाइन.': 'Attractive invitation designs for all occasions.',
+        'व्हिजिटिंग कार्ड': 'Visiting Card',
+        'व्यावसायिक आणि आकर्षक व्हिजिटिंग कार्ड डिझाइन व प्रिंट.': 'Professional and attractive visiting card design & print.',
+        'Personal Business': 'Personal Business',
+        'वैयक्तिक व्यवसाय': 'Personal Business',
+        'वैयक्तिक व्यवसाय डिझाइन व प्रिंट.': 'Personal business design & print.',
+        'लग्न पत्रिका डिझाइन': 'Wedding Card Design',
+        'आधुनिक आणि पारंपारिक लग्न पत्रिकांचे डिझाइन.': 'Modern and traditional wedding card designs.',
+        'इलेक्शन डिझाइन': 'Election Design',
+        'राजकीय प्रचारासाठी डिझाइन सेवा.': 'Design services for political campaigns.',
+        'सण-उत्सव डिझाइन': 'Festival Design',
+        'सर्व सण-उत्सवासाठी आकर्षक डिझाइन.': 'Attractive designs for all festivals.',
+        'लग्न पत्रिका व्हिडिओ': 'Wedding Card Video',
+        'लग्न पत्रिकांसाठी खास व्हिडिओ डिझाइन.': 'Special video designs for wedding cards.',
+        'फोटो फ्रेम': 'Photo Frame',
+        'खास प्रसंगांसाठी सुंदर फोटो फ्रेम्स.': 'Beautiful photo frames for special occasions.',
+        'अॅक्रिलिक एलईडी बोर्ड': 'Acrylic LED Board',
+        'डिझाइन केलेले आकर्षक अॅक्रिलिक एलईडी बोर्ड उपलब्ध.': 'Attractive, custom-designed acrylic LED boards available.',
+        'प्रमाणपत्र डिझाइन तसेच व्हिजिटिंग कार्ड डिझाइन व प्रिंट करून मिळेल.': 'Certificate design and visiting card design & print available.',
+        'आम्ही तयार आहोत, आपल्याला सेवेत..!': 'We are ready to serve you..!',
+        'संपर्क साधा': 'Contact Us',
+        'डिझाइन किंवा प्रिंटिंगसाठी आजच संपर्क करा!': 'Contact us today for design or printing!',
+        'रोहन मोरये': 'Rohan Moraye',
+        '&copy; 2025 मोरया ग्राफिक्स. All rights reserved.': '&copy; 2025 Morya Graphics. All rights reserved.'
+    },
+    mr: {}
+};
+
+// Hero slider logic
+const marathiSlides = document.querySelectorAll('#marathi-slides .hero-slide');
+const englishSlides = document.querySelectorAll('#english-slides .hero-slide');
+let marathiIndex = 0;
+let englishIndex = 0;
+let marathiInterval, englishInterval;
+let currentLang = 'mr';
+
+function showSlide(slides, index) {
+    slides.forEach((slide, i) => slide.style.display = i === index ? '' : 'none');
+}
+function startMarathiSlider() {
+    showSlide(marathiSlides, marathiIndex);
+    marathiInterval = setInterval(() => {
+        marathiIndex = (marathiIndex + 1) % marathiSlides.length;
+        showSlide(marathiSlides, marathiIndex);
+    }, 1500);
+}
+function startEnglishSlider() {
+    showSlide(englishSlides, englishIndex);
+    englishInterval = setInterval(() => {
+        englishIndex = (englishIndex + 1) % englishSlides.length;
+        showSlide(englishSlides, englishIndex);
+    }, 1500);
+}
+function stopMarathiSlider() { clearInterval(marathiInterval); }
+function stopEnglishSlider() { clearInterval(englishInterval); }
+
+// Start with Marathi
+document.getElementById('marathi-slides').style.display = '';
+document.getElementById('english-slides').style.display = 'none';
+startMarathiSlider();
+
+document.getElementById('translate-btn').addEventListener('click', function() {
+    if (currentLang === 'mr') {
+        // Switch to English
+        stopMarathiSlider();
+        document.getElementById('marathi-slides').style.display = 'none';
+        document.getElementById('english-slides').style.display = '';
+        startEnglishSlider();
+        this.textContent = 'मराठीत';
+        currentLang = 'en';
+    } else {
+        // Switch to Marathi
+        stopEnglishSlider();
+        document.getElementById('english-slides').style.display = 'none';
+        document.getElementById('marathi-slides').style.display = '';
+        startMarathiSlider();
+        this.textContent = 'Translate';
+        currentLang = 'mr';
+    }
+
+    // Translate all other site text
+    Object.keys(translations.en).forEach(mrText => {
+        const enText = translations.en[mrText];
+        document.querySelectorAll('*').forEach(el => {
+            // For headings and paragraphs
+            if (el.childNodes.length === 1 && el.childNodes[0].nodeType === 3) {
+                if (currentLang === 'en' && el.textContent.trim() === mrText.replace(/\n/g, '')) {
+                    el.textContent = enText;
+                } else if (currentLang === 'mr' && el.textContent.trim() === enText) {
+                    el.textContent = mrText.replace(/\n/g, '');
+                }
+            }
+            // For input placeholders
+            if (el.placeholder && (el.placeholder === mrText || el.placeholder === enText)) {
+                el.placeholder = currentLang === 'en' ? enText : mrText;
+            }
+        });
+    });
+});
+</script>
+                                <script>
+                                // Lightbox functionality for portfolio images
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    const images = document.querySelectorAll('.portfolio-img');
+                                    images.forEach(img => {
+                                        img.addEventListener('click', function() {
+                                            const overlay = document.createElement('div');
+                                            overlay.className = 'lightbox-overlay';
+                                            overlay.innerHTML = `
+                                                <button class="lightbox-close" aria-label="Close">&times;</button>
+                                                <img src="${img.src}" alt="${img.alt}" class="lightbox-img" />
+                                                <div class="lightbox-caption">${img.getAttribute('data-caption') || ''}</div>
+                                            `;
+                                            document.body.appendChild(overlay);
+                                            overlay.querySelector('.lightbox-close').onclick = () => overlay.remove();
+                                            overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+                                            document.addEventListener('keydown', function esc(e) { if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', esc); } });
+                                        });
+                                    });
+                                });
+                                </script>
+                <script>
+                // Translation toggle logic (improved for split spans)
+                const translations = {
+                    en: {
+                        'व्हिजिटिंग कार्ड': 'Visiting Card',
+                        'व्यावसायिक आणि आकर्षक व्हिजिटिंग कार्ड डिझाइन व प्रिंट.': 'Professional and attractive visiting card design & print.',
+                        'Personal Business': 'Personal Business',
+                        'वैयक्तिक व्यवसाय डिझाइन व प्रिंट.': 'Personal business design & print.',
+                        'मोरया ग्राफिक्स': 'Morya Graphics',
+                        'सेवा': 'Services',
+                        'पोर्टफोलिओ': 'Portfolio',
+                        'संपर्क': 'Contact',
+                        'आकर्षक डिझाइन': 'Attractive Design',
+                        'विश्वसनीय सेवा': 'Reliable Service',
+                        'सोशल मीडिया, इव्हेंट्स, लग्नपत्रिका, आणि बरेच काही – सर्व काही एकाच ठिकाणी!': 'Social media, events, wedding cards, and much more – all in one place!',
+                        'आता संपर्क करा': 'Contact Now',
+                        'आमच्या सेवा': 'Our Services',
+                        'वाढदिवस डिझाइन': 'Birthday Design',
+                        'आकर्षक वाढदिवस बॅनर आणि पोस्टर्स डिझाइन.': 'Attractive birthday banners and poster designs.',
+                        'वाढदिवस व्हिडिओ': 'Birthday Video',
+                        'खास वाढदिवसाच्या व्हिडिओंसाठी उत्कृष्ट डिझाइन.': 'Special video designs for birthdays.',
+                        'लग्न पत्रिका डिझाइन': 'Wedding Card Design',
+                        'आधुनिक आणि पारंपारिक लग्न पत्रिकांचे डिझाइन.': 'Modern and traditional wedding card designs.',
+                        'लग्न पत्रिका व्हिडिओ': 'Wedding Card Video',
+                        'लग्न पत्रिकांसाठी खास व्हिडिओ डिझाइन.': 'Special video designs for wedding cards.',
+                        'इलेक्शन डिझाइन': 'Election Design',
+                        'राजकीय प्रचारासाठी डिझाइन सेवा.': 'Design services for political campaigns.',
+                        'सण-उत्सव डिझाइन': 'Festival Design',
+                        'सर्व सण-उत्सवासाठी आकर्षक डिझाइन.': 'Attractive designs for all festivals.',
+                        'जयंती- पुण्यतिथी फ्लेक्स': 'Anniversary & Memorial Flex',
+                        'जयंती आणि पुण्यतिथीसाठी फ्लेक्स डिझाइन.': 'Flex designs for anniversaries and memorials.',
+                        'फोटो फ्रेम': 'Photo Frame',
+                        'खास प्रसंगांसाठी सुंदर फोटो फ्रेम्स.': 'Beautiful photo frames for special occasions.',
+                        'अॅक्रिलिक एलईडी बोर्ड': 'Acrylic LED Board',
+                        'डिझाइन केलेले आकर्षक अॅक्रिलिक एलईडी बोर्ड उपलब्ध.': 'Attractive, custom-designed acrylic LED boards available.',
+                        'पोर्टफोलिओ': 'Portfolio',
+                        'प्रमाणपत्र डिझाइन तसेच व्हिजिटिंग कार्ड डिझाइन व प्रिंट करून मिळेल.': 'Certificate design and visiting card design & print available.',
+                        'आम्ही तयार आहोत, आपल्याला सेवेत..!': 'We are ready to serve you..!',
+                        'MONTHLY PACKAGE AVAILABLE': 'MONTHLY PACKAGE AVAILABLE',
+                        'संपर्क साधा': 'Contact Us',
+                        'डिझाइन किंवा प्रिंटिंगसाठी आजच संपर्क करा!': 'Contact us today for design or printing!',
+                        'रोहन मोरये': 'Rohan Moraye',
+                        'पाठवा': 'Send',
+                        'तुमचं नाव': 'Your Name',
+                        'ईमेल': 'Email',
+// ...existing code...
+                        '&copy; 2025 मोरया ग्राफिक्स. All rights reserved.': '&copy; 2025 Morya Graphics. All rights reserved.'
